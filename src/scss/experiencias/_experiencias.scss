@@ -1,0 +1,40 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+.experiencias{
+
+    &__heading {
+        margin: 2rem 0;
+    }
+
+    &__listado {
+        column-gap: 2rem;
+        display: grid;
+        grid-template-columns: repeat(3,30rem);
+        overflow-x: scroll;
+        overflow-y: hidden;
+        scroll-snap-type: x mandatory;
+
+        @include m.tablet { 
+            display: grid;
+            gap: 2rem;
+            grid-template-columns: repeat(3,1fr);
+            
+          }
+    }
+
+    &__imagen {
+        border-radius: 1rem;
+    }
+
+    &__titulo {
+        font-size: 2rem;
+        font-weight: 700;
+    }
+
+    &__descripcion {
+        font-size: 1.8rem;
+    }
+
+}
